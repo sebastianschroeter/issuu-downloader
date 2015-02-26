@@ -18,7 +18,7 @@ public class CliProgress {
     }
 
     public void updateProgress(final int current) {
-        int endStep = Math.round((current + 1) * stepWidth);
+        int endStep = Math.round((current) * stepWidth);
         System.out.print("[");
         for (int i = 0; i <= LINE_LENGTH; i++) {
             if (i <= endStep) {
@@ -28,7 +28,7 @@ public class CliProgress {
             }
         }
 
-        int percent = Math.round((float) (current + 1) / end * 100);
+        int percent = Math.round((float) (current) / end * 100);
         System.out.printf("] [% 3d%%]\r", percent);
     }
 
